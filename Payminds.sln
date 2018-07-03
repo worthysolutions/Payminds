@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payminds", "Payminds\Payminds.csproj", "{740801D1-BE67-4AB0-9745-B32C3E762E1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{740801D1-BE67-4AB0-9745-B32C3E762E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740801D1-BE67-4AB0-9745-B32C3E762E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740801D1-BE67-4AB0-9745-B32C3E762E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740801D1-BE67-4AB0-9745-B32C3E762E1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C254ECB-8607-4E93-BE02-3AF331E1EC45}
+	EndGlobalSection
+EndGlobal
