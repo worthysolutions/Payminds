@@ -24,31 +24,7 @@
                         <td>
                             <input type="text" id="email" placeholder="email" />
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Phone Number
-                        </td>
-                        <td>
-                            <input type="text" id="phone" placeholder="Phone" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Name
-                        </td>
-                        <td>
-                            <input type="text" id="name" placeholder="Name" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Role
-                        </td>
-                        <td>
-                            <input type="text" id="role" placeholder="Role" />
-                        </td>
-                    </tr>
+                    </tr>                  
                     <tr>
                         <td>
                             Password
@@ -96,13 +72,14 @@
             </div>
         </div>
     </div>
-    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#linkClose').click(function () {
                 $('#divError').hide('fade');
             });
+           
             $('#registerBtn').click(function () {
                 $.ajax({
                     url: 'api/Account/Register',
