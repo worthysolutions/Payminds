@@ -8,46 +8,68 @@
 <body style="padding-top:20px">
     <div class="col-md-6 col-lg-offset-3">
         <div class="well">
-            <table class="table table-bordered">
-                <thead>
-                    <tr class="success">
-                        <td colspan="2" style="text-align:center">
-                            <h3>New Registeration</h3>
-                        </td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            Email
-                        </td>
-                        <td>
-                            <input type="text" id="email" placeholder="email" />
-                        </td>
-                    </tr>                  
-                    <tr>
-                        <td>
-                            Password
-                        </td>
-                        <td>
-                            <input type="password" id="password" placeholder="password" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Confirm Password
-                        </td>
-                        <td>
-                            <input type="password" id="cPassword" placeholder="password" />
-                        </td>
-                    </tr>
-                    <tr class="success">
-                        <td colspan="2" style="text-align:center">
-                            <input type="button" id="registerBtn" class="btn btn-success" value="Register" />
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <form action="" id="registerForm">
+                <table class="table table-bordered">
+                    
+                    <thead>
+                        <tr class="success">
+                            <td colspan="2" style="text-align:center">
+                                <h3>New Registeration</h3>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <label for="phone">Phone</label>
+                            </td>
+                            <td>
+                                <input type="text" id="phone" required placeholder="Phone #" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">Email</label>
+                            </td>
+                            <td>
+                                <input type="email" required id="email" placeholder="example@example.com" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="name">Full Name</label>
+                            </td>
+                            <td>
+                                <input type="text" id="name" required placeholder="Full Name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">Password</label>
+                            </td>
+                            <td>
+                                <input type="password" id="password" required placeholder="password" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="cPasswod">Confirm Password</label>
+                            </td>
+                            <td>
+                                <input type="password" id="cPassword" required placeholder="password" />
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td colspan="2" style="text-align:center">
+                                <input type="submit" id="registerBtn" class="btn btn-success" value="Register" />
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </form>
             <div class="modal fade" tabindex="-1" id="successModal" data-keyboard="false" data-backdrop="static">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
@@ -79,14 +101,16 @@
             $('#linkClose').click(function () {
                 $('#divError').hide('fade');
             });
-           
-            $('#registerBtn').click(function () {
+            $(document).on('submit', '#registerForm', function (e) {
+                // do your things
+                e.preventDefault();
                 $.ajax({
                     url: 'api/Account/Register',
                     method: 'POST',
                     data: {
-                        email: $('#email').val(),
-
+                        PhoneNumber: $('#phone').val(),
+                        Email: $('#email').val(),
+                        Name: $('#name').val(),
                         password: $('#password').val(),
                         confirmpassword: $('#cPassword').val()
                     },
@@ -101,8 +125,9 @@
                         $('#divError').show('fade');
                     }
                 });
-
+                return false;
             });
+            
         });
     </script>
 </body>
