@@ -328,7 +328,7 @@ namespace Payminds.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Name, PhoneNumber = model.PhoneNumber ,Email=model.Email};
+            var user = new ApplicationUser() { UserName = model.Email, PhoneNumber = model.PhoneNumber ,Email=model.Email};
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
