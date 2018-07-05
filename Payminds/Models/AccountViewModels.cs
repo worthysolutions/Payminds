@@ -37,6 +37,7 @@ namespace Payminds.Models
         public bool HasRegistered { get; set; }
 
         public string LoginProvider { get; set; }
+        public string DisplayName { get; set; }
     }
 
     public class UserLoginInfoViewModel
