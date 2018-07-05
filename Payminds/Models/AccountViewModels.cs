@@ -23,6 +23,11 @@ namespace Payminds.Models
         public IEnumerable<UserLoginInfoViewModel> Logins { get; set; }
 
         public IEnumerable<ExternalLoginViewModel> ExternalLoginProviders { get; set; }
+
+        // added by me
+        public string id { get; set; }
+        public string DisplayName { set; get; }
+        public string PhoneNumber { set; get; }
     }
 
     public class UserInfoViewModel

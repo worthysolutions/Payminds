@@ -110,6 +110,10 @@ namespace Payminds.Controllers
                 LocalLoginProvider = LocalLoginProvider,
                 Email = user.UserName,
                 Logins = logins,
+                id=user.Id,
+                PhoneNumber=user.PhoneNumber,
+                
+                
                 ExternalLoginProviders = GetExternalLogins(returnUrl, generateState)
             };
         }
