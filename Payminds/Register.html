@@ -22,6 +22,14 @@
 
                         <tr>
                             <td>
+                                <label for="name">Full Name</label>
+                            </td>
+                            <td>
+                                <input type="text" id="name" required placeholder="Full Name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <label for="phone">Phone</label>
                             </td>
                             <td>
@@ -36,7 +44,7 @@
                                 <input type="email" required id="email" placeholder="example@example.com" />
                             </td>
                         </tr>
-                        
+
                         <tr>
                             <td>
                                 <label for="password">Password</label>
@@ -74,7 +82,7 @@
                         </div>
                         <div class="modal-body">
                             <h2>Registeration Successful!</h2>
-                        </div>
+                        </div> 
                         <div class="modal-footer success">
                             <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
                         </div>
@@ -101,6 +109,7 @@
                     url: 'api/Account/Register',
                     method: 'POST',
                     data: {
+                        DisplayName: $('#name').val(),
                         PhoneNumber: $('#phone').val(),
                         Email: $('#email').val(),
                         password: $('#password').val(),

@@ -34,7 +34,15 @@ namespace Payminds.Models
 
     public class RegisterBindingModel
     {
-        
+
+        //added by me
+        //added by me
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "DisplayName")]
+        public string DisplayName { get; set; }
+
+
         [Required]
         [Display(Name = "PhoneNumber")]
         public string PhoneNumber { get; set; }
